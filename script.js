@@ -6588,15 +6588,35 @@ const colors = [
   '#73A857'
 ];
 
+
+let text   = document.querySelector('#text');
+let author = document.querySelector('#author');
+let button = document.querySelector('#new-quote')
+let body   = document.querySelector('body');
+let color;
+let quote;
+
+
+
+
 function getRandomColor() {
   const randomColor = colors[
     Math.floor(Math.random() * colors.length)
   ];
 
   // Your code below
+  body.style.backgroundColor    = randomColor;
+  button.style.backgroundColor  = randomColor;
+  text.style.color    = randomColor;
+  author.style.color  = randomColor;
+  body.style.color    = randomColor;
 
   // Your code above
 }
+
+text.textContent = quotesData[Math.floor(Math.random() * quotesData.length)].text;
+author.textContent = quotesData[Math.floor(Math.random() * quotesData.length)].author;
+
 
 function getRandomQuote() {
   const randomQuote = quotesData[
@@ -6604,10 +6624,15 @@ function getRandomQuote() {
   ];
 
   // Your code below
-
+  text.textContent = randomQuote.text;
+  author.textContent = randomQuote.author;
   // Your code above
 }
 
 // Your code below
 
+button.addEventListener('click', () => {
+  getRandomQuote();
+  getRandomColor();
+})
 // Your code above
