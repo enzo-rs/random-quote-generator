@@ -6607,8 +6607,7 @@ function getRandomColor() {
   // Your code below
   body.style.backgroundColor    = randomColor;
   button.style.backgroundColor  = randomColor;
-  text.style.color    = randomColor;
-  author.style.color  = randomColor;
+  
   body.style.color    = randomColor;
 
   // Your code above
@@ -6636,3 +6635,14 @@ button.addEventListener('click', () => {
   getRandomColor();
 })
 // Your code above
+
+
+
+
+
+
+
+
+.addEventListener('click', () => {
+
+})
